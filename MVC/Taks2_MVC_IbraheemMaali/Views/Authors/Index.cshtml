@@ -1,0 +1,117 @@
+﻿@using MVC_Project_BookStore.ViewModel;
+@model List<AuthorViewModel>
+
+@section Title{
+    Authors
+}
+@section subTitle{
+    Show
+}
+
+@section buttons{
+    <a asp-controller="Authors" asp-action="Create" class="btn btn-primary">Create</a>
+}
+
+@if (!Model.Any())
+{
+    <div class="card-body">
+        <div class="alert alert-warning alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
+            No data Found
+
+        </div>
+    </div>
+}
+
+else
+{
+    <div class="card-body">
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="width: 10px w-25" class="text-center">#</th>
+                    <th class="text-center w-50">Name</th>
+                    <th class="text-center w-25">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in @Model)
+                {
+                    <tr>
+                        <td class="text-center">
+                            @item.Id
+                        </td>
+                        <td class="text-center">
+                            @item.Name
+                        </td class="text-center">
+                        <td class="d-flex justify-content-around">
+                            <a asp-controller="Authors" asp-action="Edit" asp-route-id="@item.Id" class="btn bg-warning"><i class="fas fa-edit"></i> Edit</a>
+                            <a asp-controller="Authors" asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary"><i class="fas fa-info"></i> Details</a>
+                            <a asp-controller="Authors" asp-action="Delete" asp-route-id="@item.Id" class="btn bg-danger"><i class="fas fa-trash"></i> Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+       @section scripts{
+     <script> 
+  const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  iconColor: 'green',
+  customClass: {
+    popup: 'colored-toast',
+  },
+  showConfirmButton: false,
+  timer: 1500,
+  timerProgressBar: true,
+})
+
+
+      const elements=document.querySelectorAll(".js-delete");
+     for(let ele of elements){
+     ele.addEventListener("click", ()=>{
+              console.log("hi");
+              let id=ele.dataset.id;
+              console.log(id);
+               Swal.fire({
+  title: "Do you want to Delete the categoy?",
+  showDenyButton: true,
+  showCancelButton: true,
+  confirmButtonText: "Delete",
+  denyButtonText: `Don't Delete`
+}).then(async(result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+      const response=await fetch(`/Authors/Delete/${id}`,{
+                  method:"Post"
+              })
+
+              if(response.ok){
+            ele.closest("tr").remove();
+             //Swal.fire("Deleted!", "", "success");
+
+             (async () => {
+  await Toast.fire({
+    icon: 'success',
+    title: 'author deleted successfully!',
+  })
+  })()
+              }
+              else{
+                   Swal.fire("Ooops....Author is not deleted , http 404 internal error", "", "info");
+              }
+  
+  } else if (result.isDenied) {
+    Swal.fire("Author is not deleted", "", "info");
+  }
+});
+          })
+      } 
+   </script> ;
+} 

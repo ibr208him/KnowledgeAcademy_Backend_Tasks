@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "ffcCULQ76PrMUCCA65N1nFizcSSdtk3L9LlErl1q6SuXkkRiqJFH8f+mHXEqMPgwCFyGr20BPvwtH2o587uxug==",
+  "success": true,
+  "projectFilePath": "D:\\أكاديمية المعرفة\\Full stack\\Backend\\ASP.net\\API\\myCoding\\learning1_Crud\\learning_API_1\\learning_API_1\\learning_API_1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ibrahim\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.4\\microsoft.aspnetcore.openapi.7.0.4.nupkg.sha512",
+    "C:\\Users\\Ibrahim\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Ibrahim\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\Ibrahim\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\Ibrahim\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\Ibrahim\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\Ibrahim\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

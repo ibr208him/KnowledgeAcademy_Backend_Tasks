@@ -1,0 +1,82 @@
+﻿@using MVC_Project_BookStore.ViewModel;
+@model List<BookViewModel>
+
+@section Title{
+    Books
+}
+@section subTitle{
+   Show
+}
+
+@section buttons{
+    <a asp-controller="Books" asp-action="Create" class="btn btn-primary">Create</a>
+}
+
+
+@if (!Model.Any())
+{
+    <div class="card-body">
+        <div class="alert alert-warning alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
+            No data Found
+
+        </div>
+    </div>
+}
+
+else
+{
+    <div class="card-body">
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="" class="text-center">#</th>
+                    <th >Title</th>
+                    <th >Author</th>
+                    <th >Publisher</th>
+                     <th >PublishDate</th>
+                      <th >ImageUrl</th>
+                       <th >Categories</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in @Model) 
+                {
+                    <tr>
+                        <td class="text-center">
+                            @item.Id
+                        </td>
+                        <td class="text-center">
+                            @item.Title
+                        </td>
+                        <td class="text-center">
+                            @item.Author
+                        </td>
+                          <td class="text-center">
+                            @item.Publisher
+                        </td>
+                        
+                        <td class="text-center">
+                        @item.PublishDate
+                        </td>
+                        <td class="text-center">
+                           @* @item.ImageUrl*@
+                            <img class="w-25 img-fluid" src="~/images/books/@item.ImageUrl" />
+                        </td>
+                        <td>
+                            @string.Join(", ", @item.categories) <!-- convert  list to string--> 
+                        </td>
+
+                        <td class="d-flex justify-content-around">
+                            <a asp-controller="Categories" asp-action="Edit" asp-route-id="@item.Id" class="btn bg-warning"><i class="fas fa-edit"></i> Edit</a>
+                            <a asp-controller="Categories" asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary"><i class="fas fa-info"></i> Details</a>
+                            <a asp-controller="Books" asp-action="Delete" asp-route-id="@item.Id" class="btn bg-danger"><i class="fas fa-trash"></i> Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

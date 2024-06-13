@@ -1,0 +1,27 @@
+﻿@using MVC_Project_BookStore.ViewModel
+@model CategoryViewModel
+@section Title{
+    Categoriesc
+}
+@section subTitle{
+    @(Model?.Id == null ? "Create" : "Edit")
+}
+
+<form asp-controller="Categories">
+
+<div class="card-body">
+        <div class="form-group"> 
+
+           @* <label for="name">Name</label>
+            <input type="text" class="form-contrl" id="name"  name="Name" />*@
+
+            <label asp-for="Name">Name</label>
+            <input type="text" class="form-control" asp-for="Name"/>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        </div>
+            <div class="card-footer">
+        <button typeof="submit" class="btn btn-primary">  @(Model?.Id == null ? "Add" : "Update")</button>
+      
+</div>
+</form>

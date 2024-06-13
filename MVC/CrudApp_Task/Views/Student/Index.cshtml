@@ -1,0 +1,36 @@
+﻿@model List<Student>
+
+<a href="/Student/Create" class="btn-primary"> Create</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Details</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+        @foreach (var std in Model)
+        {
+             <tr>
+                <th scope="row">@std.Id</th>
+                <td>@std.Name</td>
+                <td>
+                    <a href="/Student/Details/@std.Id">Details </a>
+
+                </td>
+                <td>
+                    <a href="/Student/Delete/@std.Id">Delete </a>
+
+                </td>
+               
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
+
