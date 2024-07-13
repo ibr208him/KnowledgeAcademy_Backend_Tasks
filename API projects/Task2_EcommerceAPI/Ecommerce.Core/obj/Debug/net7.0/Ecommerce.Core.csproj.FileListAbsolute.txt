@@ -1,0 +1,12 @@
+D:\أكاديمية المعرفة\Full stack\Backend\ASP.net\API\myCoding\EcommerceAPI\Ecommerce.Core\bin\Debug\net7.0\Ecommerce.Core.deps.json
+D:\أكاديمية المعرفة\Full stack\Backend\ASP.net\API\myCoding\EcommerceAPI\Ecommerce.Core\bin\Debug\net7.0\Ecommerce.Core.dll
+D:\أكاديمية المعرفة\Full stack\Backend\ASP.net\API\myCoding\EcommerceAPI\Ecommerce.Core\bin\Debug\net7.0\Ecommerce.Core.pdb
+D:\أكاديمية المعرفة\Full stack\Backend\ASP.net\API\myCoding\EcommerceAPI\Ecommerce.Core\obj\Debug\net7.0\Ecommerce.Core.csproj.AssemblyReference.cache
+D:\أكاديمية المعرفة\Full stack\Backend\ASP.net\API\myCoding\EcommerceAPI\Ecommerce.Core\obj\Debug\net7.0\Ecommerce.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\أكاديمية المعرفة\Full stack\Backend\ASP.net\API\myCoding\EcommerceAPI\Ecommerce.Core\obj\Debug\net7.0\Ecommerce.Core.AssemblyInfoInputs.cache
+D:\أكاديمية المعرفة\Full stack\Backend\ASP.net\API\myCoding\EcommerceAPI\Ecommerce.Core\obj\Debug\net7.0\Ecommerce.Core.AssemblyInfo.cs
+D:\أكاديمية المعرفة\Full stack\Backend\ASP.net\API\myCoding\EcommerceAPI\Ecommerce.Core\obj\Debug\net7.0\Ecommerce.Core.csproj.CoreCompileInputs.cache
+D:\أكاديمية المعرفة\Full stack\Backend\ASP.net\API\myCoding\EcommerceAPI\Ecommerce.Core\obj\Debug\net7.0\Ecommerce.Core.dll
+D:\أكاديمية المعرفة\Full stack\Backend\ASP.net\API\myCoding\EcommerceAPI\Ecommerce.Core\obj\Debug\net7.0\refint\Ecommerce.Core.dll
+D:\أكاديمية المعرفة\Full stack\Backend\ASP.net\API\myCoding\EcommerceAPI\Ecommerce.Core\obj\Debug\net7.0\Ecommerce.Core.pdb
+D:\أكاديمية المعرفة\Full stack\Backend\ASP.net\API\myCoding\EcommerceAPI\Ecommerce.Core\obj\Debug\net7.0\ref\Ecommerce.Core.dll
